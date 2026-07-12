@@ -1,12 +1,12 @@
 backend:
   name: github
-  repo: Syauqi-dotcom/scientific
+  repo: Syauqi-dotcom/porto
   branch: main
 
 local_backend: true
 
 media_folder: "public/projects"
-public_folder: "/scientific/projects"
+public_folder: "/porto/projects"
 
 collections:
   - name: "profile"
@@ -61,6 +61,21 @@ collections:
         required: false
         field: {label: "Logo Image", name: "logo", widget: "image"}
           
+  - name: "experience"
+    label: "Experience"
+    folder: "src/content/experience"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    sortable_fields: ["period", "title"]
+    fields:
+      - {label: "Title (Organization)", name: "title", widget: "string", hint: "e.g. Badan Riset dan Inovasi Nasional (BRIN)"}
+      - {label: "Period", name: "period", widget: "string", hint: "e.g. 2026, 2025 (odd sem)"}
+      - {label: "Role", name: "role", widget: "string", hint: "e.g. Research Intern — Pusat Riset Fisika Kuantum"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+
   - name: "notebook"
     label: "Research Notes"
     folder: "src/content/notebook"
@@ -74,3 +89,4 @@ collections:
       - {label: "Tag", name: "tag", widget: "string"}
       - {label: "Snippet", name: "snippet", widget: "text"}
       - {label: "More Explanation", name: "explanation", widget: "text", required: false}
+

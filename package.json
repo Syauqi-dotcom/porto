@@ -1,10 +1,10 @@
 {
-  "name": "portofolio",
+  "name": "porto",
   "version": "1.0.0",
   "description": "",
   "type": "module",
   "main": "index.js",
-  "homepage": "https://Syauqi-dotcom.github.io/scientific/",
+  "homepage": "https://Syauqi-dotcom.github.io/porto/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

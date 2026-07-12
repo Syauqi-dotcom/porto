@@ -29,8 +29,7 @@ const AboutSection = () => (
                     <ScrollReveal delay={0.3} direction="up">
                         <p className="text-[#16161D]/50 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
                             I implement quantum algorithms like VQE for real-world problems, build data-driven systems,
-                            and explore the frontier of AI. When I'm not writing code, I'm tutoring physics
-                            and preparing the next generation for national science olympiads.
+                            and explore the frontier of AI.
                         </p>
                     </ScrollReveal>
 

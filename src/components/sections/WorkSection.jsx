@@ -9,7 +9,10 @@ import { getStoredProjects } from '../../utils/projectsStore';
 gsap.registerPlugin(ScrollTrigger);
 
 const WorkCard = ({ project, index }) => (
-    <div className="flex-shrink-0 w-[85vw] md:w-[500px] lg:w-[600px] h-full border-l border-[#16161D]/10 px-8 md:px-12 py-6 flex flex-col justify-between group">
+    <Link
+        to="/projects"
+        className="flex-shrink-0 w-[85vw] md:w-[500px] lg:w-[600px] h-full border-l border-[#16161D]/10 px-8 md:px-12 py-6 flex flex-col justify-between group cursor-pointer no-underline"
+    >
         {/* Top metadata */}
         <div className="flex justify-between items-center w-full">
             <span className="font-mono text-xs text-[#A3785B] font-bold tracking-widest">
@@ -48,6 +51,7 @@ const WorkCard = ({ project, index }) => (
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-[#16161D]/50 hover:text-[#A3785B] transition-colors border-b border-[#16161D]/10 hover:border-[#A3785B]/50 pb-0.5 w-fit"
             >
                 View repository ↗
@@ -55,7 +59,7 @@ const WorkCard = ({ project, index }) => (
         ) : (
             <div className="h-[20px]" />
         )}
-    </div>
+    </Link>
 );
 
 const WorkSection = () => {

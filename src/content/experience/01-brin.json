@@ -1,0 +1,7 @@
+{
+  "title": "Badan Riset dan Inovasi Nasional (BRIN)",
+  "period": "2026",
+  "role": "Research Intern — Pusat Riset Fisika Kuantum",
+  "description": "Implemented the Variational Quantum Eigensolver (VQE) algorithm for molecular energy calculations. Worked on quantum circuit optimization using Qiskit.",
+  "logo": "/porto/assets/brin.png"
+}

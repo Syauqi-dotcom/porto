@@ -1,21 +1,22 @@
 {
-  "title": "Bio-Battery Project",
+  "preview": "/porto/projects/biobattery.jpeg",
+  "collaborators": [
+    "/porto/projects/eduversal.png",
+    "/porto/projects/sman3semarang.png",
+    "/porto/projects/ispo.png"
+  ],
   "date": "2024",
-  "credit": "Research & Experiment",
-  "link": "https://youtu.be/0rkcWSHBx_w?si=edwhKDT1nifmXj-f",
-  "preview": "/scientific/projects/biobattery.jpeg",
-  "overview": "My research focuses on optimizing sustainable bio-battery innovations; consequently, I attained a silver medal at ISPO and secured a nomination to represent Indonesia at VILIPO in Lithuania",
-  "development": "",
-  "result": "",
+  "title": "Bio-Battery Project",
   "tags": [
     "Research",
     "Experiment",
     "Data Analysis"
   ],
-  "collaborators": [
-    "/scientific/projects/eduversal.png",
-    "/scientific/projects/sman3semarang.png",
-    "/scientific/projects/ispo.png"
-  ],
+  "overview": "My research focuses on optimizing sustainable bio-battery innovations; consequently, I attained a silver medal at ISPO and secured a nomination to represent Indonesia at VILIPO in Lithuania",
+  "credit": "Research & Experiment",
+  "link": "https://youtu.be/0rkcWSHBx_w?si=edwhKDT1nifmXj-f",
+  "development": "",
+  "selected": true,
+  "result": "",
   "category": "Other"
 }

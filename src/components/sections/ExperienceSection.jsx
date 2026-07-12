@@ -1,35 +1,14 @@
 import React from 'react';
 import SectionLabel from '../atoms/SectionLabel';
 import { ScrollReveal } from '../../utils/useScrollReveal';
-const brinLogo = `${import.meta.env.BASE_URL}assets/brin.png`;
-const ugmLogo = `${import.meta.env.BASE_URL}assets/ugm.png`;
-const sman3Logo = `${import.meta.env.BASE_URL}assets/sman3semarang.png`;
 
-const experiences = [
-    {
-        period: '2026',
-        org: 'Badan Riset dan Inovasi Nasional (BRIN)',
-        role: 'Research Intern — Pusat Riset Fisika Kuantum',
-        desc: 'Implemented the Variational Quantum Eigensolver (VQE) algorithm for molecular energy calculations. Worked on quantum circuit optimization using Qiskit.',
-        logo: brinLogo,
-    },
-    {
-        period: '2025 (odd sem)',
-        org: 'Dept. of Electrical & Information Engineering, UGM',
-        role: 'Tutor Assistant — Physics, Wave & Heat Transfer',
-        desc: 'Assisted undergraduate students with physics fundamentals, wave mechanics, and heat transfer. Facilitated lab sessions and problem-solving workshops.',
-        logo: ugmLogo,
-    },
-    {
-        period: '2023',
-        org: 'SMAN 3 Semarang',
-        role: 'Coordinator — Physics Olympiad Preparation',
-        desc: 'Led a tutoring program preparing students for the National Science Olympiad (OSN) in physics. Developed curriculum and coaching strategies.',
-        logo: sman3Logo,
-    },
-];
+// Load experience entries from content folder (managed by Decap CMS)
+const experienceModules = import.meta.glob('../../content/experience/*.json', { eager: true });
+const experiences = Object.values(experienceModules)
+    .map(mod => mod.default || mod)
+    .sort((a, b) => String(b.period).localeCompare(String(a.period)));
 
-const ExperienceRow = ({ period, org, role, desc, logo, index }) => (
+const ExperienceRow = ({ title, period, role, description, logo, index }) => (
     <ScrollReveal delay={0.1 * index} direction="up">
         <div className="grid md:grid-cols-[180px_1fr] gap-8 py-10 border-t border-[#16161D]/8 group">
             {/* Left: date */}
@@ -42,13 +21,13 @@ const ExperienceRow = ({ period, org, role, desc, logo, index }) => (
                 {/* Logo */}
                 {logo && (
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-[#16161D]/8 flex items-center justify-center overflow-hidden p-1.5 group-hover:border-[#A3785B]/30 transition-colors shadow-sm">
-                        <img src={logo} alt={org} className="w-full h-full object-contain" />
+                        <img src={logo} alt={title} className="w-full h-full object-contain" />
                     </div>
                 )}
                 <div>
-                    <h4 className="font-medium text-[#16161D] text-base mb-0.5 group-hover:text-[#A3785B] transition-colors">{org}</h4>
+                    <h4 className="font-medium text-[#16161D] text-base mb-0.5 group-hover:text-[#A3785B] transition-colors">{title}</h4>
                     <p className="font-mono text-[11px] text-[#A3785B]/70 mb-3 tracking-wide">{role}</p>
-                    <p className="text-[#16161D]/65 text-sm leading-relaxed">{desc}</p>
+                    <p className="text-[#16161D]/65 text-sm leading-relaxed">{description}</p>
                 </div>
             </div>
         </div>
