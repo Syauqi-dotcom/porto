@@ -34,7 +34,7 @@ collections:
           - {label: "Hero Back Photo", name: "heroBackPhoto", widget: "image", required: false, hint: "Back photo for the flip card (optional)"}
           - {label: "Hero CTA Label", name: "heroCTALabel", widget: "string", default: "View Profile", hint: "Primary button text"}
           - {label: "Hero CV Label", name: "heroCVLabel", widget: "string", default: "CV", hint: "Secondary button text"}
-          - {label: "Hero CV Link", name: "heroCVLink", widget: "string", default: "/CV.pdf", hint: "Path or URL to CV file"}
+          - {label: "Hero CV File (Upload PDF)", name: "heroCVLink", widget: "file", default: "/porto/CV.pdf", hint: "Upload your latest CV/Resume PDF file here"}
           - label: "── About Section ──"
             name: "aboutBio"
             widget: "text"
