@@ -1,12 +1,12 @@
 backend:
   name: github
-  repo: Syauqi-dotcom/scientific
+  repo: Syauqi-dotcom/porto
   branch: main
 
 local_backend: true
 
 media_folder: "public/projects"
-public_folder: "/scientific/projects"
+public_folder: "/porto/projects"
 
 collections:
   - name: "profile"
