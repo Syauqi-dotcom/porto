@@ -23,15 +23,38 @@ collections:
           - {label: "Author Name", name: "authorName", widget: "string"}
           - {label: "Author Role", name: "authorRole", widget: "string"}
           - {label: "Tagline", name: "tagline", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Description (Hero)", name: "description", widget: "text"}
+          - label: "── Hero Section ──"
+            name: "heroLabel"
+            widget: "string"
+            hint: "Small label above hero greeting (e.g. Portfolio)"
+          - {label: "Hero Greeting", name: "heroGreeting", widget: "string", hint: "Text before the typewriter name (e.g. Hi! I'm,)"}
+          - {label: "Hero Typewriter Name", name: "heroTypewriterName", widget: "string", hint: "The animated name in the hero (e.g. Syauqi.)"}
+          - {label: "Hero Photo", name: "heroPhoto", widget: "image", hint: "Front photo for the hero card"}
+          - {label: "Hero Back Photo", name: "heroBackPhoto", widget: "image", required: false, hint: "Back photo for the flip card (optional)"}
+          - {label: "Hero CTA Label", name: "heroCTALabel", widget: "string", default: "View Profile", hint: "Primary button text"}
+          - {label: "Hero CV Label", name: "heroCVLabel", widget: "string", default: "CV", hint: "Secondary button text"}
+          - {label: "Hero CV Link", name: "heroCVLink", widget: "string", default: "/CV.pdf", hint: "Path or URL to CV file"}
+          - label: "── About Section ──"
+            name: "aboutBio"
+            widget: "text"
+            hint: "Main bio paragraph in the About section"
+          - {label: "About Sub-Bio", name: "aboutSubBio", widget: "text", hint: "Secondary description below the main bio"}
+          - label: "About Highlight Words"
+            name: "aboutHighlights"
+            widget: "list"
+            hint: "Words that will be highlighted in accent color in the bio (e.g. quantum computing, generative AI)"
+          - {label: "About University", name: "aboutUniversity", widget: "string", hint: "University name displayed in italic"}
           - label: "Social Links"
             name: "socials"
             widget: "object"
             fields:
               - {label: "GitHub", name: "github", widget: "string"}
               - {label: "LinkedIn", name: "linkedin", widget: "string"}
-              - {label: "Twitter", name: "twitter", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
               - {label: "Email", name: "email", widget: "string"}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+              - {label: "WhatsApp", name: "whatsapp", widget: "string", required: false}
 
   - name: "projects"
     label: "Projects"
